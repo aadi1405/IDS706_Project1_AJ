@@ -1,5 +1,7 @@
 # IDS706-Project1-AadilaJasmin
 
+## MOVIE AND TV SHOW RECOMMENDATION SYSTEM
+
 ### WHAT IS THE PROJECT?
 This project is aimed to query a NETFLIX DATASET (taken from [ Kaggle Netflix Dataset ](https://www.kaggle.com/datasets/ariyoomotade/netflix-data-cleaning-analysis-and-visualization)) that contains information about Movies and TV Shows and act like a recommendation system to users.
 
@@ -26,20 +28,27 @@ This project is aimed to query a NETFLIX DATASET (taken from [ Kaggle Netflix Da
 
 
 ---
-### FUNCTIONS THAT HAVE BEEN IMPLEMENTED
+### FILES AND FUNCTIONS
 
+#### SCAFFOLDING FILES 
+- requirements.txt: Contains list of all packages required
+- Makefile: Easy Configuration for the codespaces.
+- ./devcontainer: contains container files.
+
+
+#### FUNCTION FILES - COMMANDS
 ```
-python welcome.py  // To Display a welcome message to the user
+- python welcome.py  // To Display a welcome message to the user
 
-./query_db.py cli-query // To display the Dataset of movies from Databricks
+- ./query_db.py cli-query // To display the Dataset of movies from Databricks
 
-python query_db.py --movie='<movie_name>' // Query to find the year of the movie or TV Show
+- python query_db.py --movie='<movie_name>' // Query to find the year of the movie or TV Show
 
-python query_desc.py --movie='<movie_name>' // Query to find the description of the movie or TV Show
+- python query_desc.py --movie='<movie_name>' // Query to find the description of the movie or TV Show
 
-python query_age.py --age=<enter an age> // Query to find suitable movies or TV Show based on your age
+- python query_age.py --age=<enter an age> // Query to find suitable movies or TV Show based on your age
 
-python query_director.py --director=<director name> // Query to find all shows and movie taken by a particular director
+- python query_director.py --director=<director name> // Query to find all shows and movie taken by a particular director
 
 ```
 ---
@@ -57,5 +66,7 @@ databricks jobs list --output JSON | jq
 ### Future Prospects 
 ```
 1) Performing more analysis and visualization to understand the data and explore Databricks!
+
 2) Extend the functions of the model and make a complete recommendation system
+
 3) Improve the User Interface (Web Application) for improved convenience.
