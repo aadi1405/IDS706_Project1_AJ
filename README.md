@@ -1,4 +1,4 @@
-# IDS706-Project1-Yutong
+# IDS706-Project1-AadilaJasmin
 
 ## Intro
 A command line tool to query data stored in databricks
