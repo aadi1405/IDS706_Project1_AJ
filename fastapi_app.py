@@ -1,13 +1,11 @@
 from fastapi import FastAPI
 import uvicorn
 from dblib.querydb import querydb
-from dblib.querydb import query_carat_price
+from dblib.querydb import query_year
 
 app = FastAPI()
 
-@app.get("/")
-async def root():
-    return {"message": "Hello Databricks"}
+
 
 @app.get("/add/{num1}/{num2}")
 async def add(num1: int, num2: int):
@@ -23,11 +21,11 @@ async def query():
     result = querydb()
     return {"result": result}
 
-@app.get("/query_avg_price/{carat}")
-async def query_ave_price(carat: float):
+@app.get("/query_avg_price/{-c7}")
+async def query_ave_price(_c7):
     """Execute a SQL query"""
 
-    result = query_carat_price(carat)
+    result = query_year(_c7)
     return {"result": result}
 
 

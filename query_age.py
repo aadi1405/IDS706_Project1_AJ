@@ -2,12 +2,11 @@
 
 import click
 from dblib.querydb import querydb
-from dblib.querydb import query_year
+from dblib.querydb import query_age
 
 # build a click group
-
-
 @click.group()
+
 def cli():
     """A simple CLI to query a SQL database"""
 
@@ -24,19 +23,18 @@ def cli_query(query):
     querydb(query)
 
 # building another click command
-
-
 @cli.command()
+
 @click.option(
-    "--movie",
-    default="Jaguar",
+    "--age",
+    default=22,
     help="Query to find the year of the movie ",
 )
-def cli_query_year(movie):
+def cli_query_age(age):
     """Execute a SQL query to find the year"""
-    query_year(movie)
+    query_age(age)
 
 
 # run the CLI
 if __name__ == "__main__":
-    cli_query_year()
+    cli_query_age()
